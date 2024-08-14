@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <!--Busque su emoji en https://www.w3schools.com/html/html_emojis.asp-->
+        <title>🚀 ¡Segunda clase!</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p> 
+                <a href="index.html"class="activo">Bienvenide</a>
+                <a href="page.html">Dibuje</a> 
+            </p>
+            <h1></h1>
+            <h2></h2>
+            <p>Tomé este curso porque me interesa mucho el área del diseño que aborda, y estoy comprometida en aprender en este campo. Dado que estas prácticas están altamente valoradas en la industria del diseño, considerándolo fundamental para mi crecimiento profesional.</p>          
+        </header>
+        <main>
+        </main>
+        
+        <script>
+            var saludo ={
+                arriba:["¡Hola mundo!","¡Hola universo!", "Holi", "Halli hallo", "Hello", "Hallo"],
+                abajo:["Mi nombre es Valeria Sawady"]
+            };
+            var titular;
+            var nombre;
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                //selecciona un par de colores en https://materialui.co/colors
+                stroke('#212121');
+                background('#B3E5FC');
+                titular = select('h1');
+                titular.html(random(saludo.arriba));
+                nombre=select('h2');
+                nombre.html(saludo.abajo);
+            }
+            function draw(){ 
+               background('#B3E5FC');
+               textSize(48);
+               text("🦋",mouseX,mouseY);
+            }
+            
+        </script>
+    </body>
+</html>

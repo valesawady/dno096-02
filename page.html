@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <!--Busque su emoji en https://www.w3schools.com/html/html_emojis.asp-->
+        <title>🚀 ¡Segunda clase!</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p> 
+                <a href="index.html">Bienvenide</a>
+                <a href="page.html" class="activo">Dibuje</a> 
+            </p>
+            <h1></h1>
+            <h2></h2>    
+            <p>Dibuja mientras haces <code>mouseDragged()</code></p>       
+        </header>
+        <main>
+        </main>
+        <aside>
+            <button onclick="foto()">Imprime</button>
+            <button onclick="borra()">Borra</button>
+        </aside>
+        <script>
+            var saludo ={
+                arriba:["¡Hola mundo!","¡Hola universo!", "Holi", "Halli hallo", "Hello", "Hallo"],
+                abajo:["Mi nombre es Valeria Sawady"]
+            };
+            var titular;
+            var nombre;
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                //selecciona un par de colores en https://materialui.co/colors
+                stroke('#212121');
+                background('#B3E5FC');
+                titular = select('h1');
+                titular.html(random(saludo.arriba));
+                nombre=select('h2');
+                nombre.html(saludo.abajo);
+            }
+    
+            function mouseDragged() {
+                line(pmouseX, pmouseY, mouseX, mouseY);
+            }
+            function foto() {
+                saveCanvas('mi-dibujo.jpg');
+            }
+
+            function borra() {
+                background('#B3E5FC');
+            }
+        </script>
+    </body>
+</html>
